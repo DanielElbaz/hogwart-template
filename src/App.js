@@ -29,7 +29,9 @@ const App = (props) => {
         </div>
         <Routes>
           <Route path="/" element={<Home categories={categories} />} />
-          <Route path="/:category" element={<Entities getCategoryData={getCategoryData} />} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/wiki/:category" element={<Entities getCategoryData={getCategoryData} />} />
+          <Route path="/wiki/:category/:entityName" element={<EntityDescription getCategoryData={getCategoryData} />} />
 
         </Routes>
       </BrowserRouter>
